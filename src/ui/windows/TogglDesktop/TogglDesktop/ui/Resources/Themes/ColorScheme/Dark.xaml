@@ -2,23 +2,23 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
     <!-- Black -->
-    <Color x:Key="Toggl.BlackColor">#FDE5EC</Color>
+    <Color x:Key="Toggl.BlackColor">#D6D6D6</Color>
     <!-- Dark Gray -->
-    <Color x:Key="Toggl.DarkGrayColor">#D5D0D8</Color>
+    <Color x:Key="Toggl.DarkGrayColor">#B9B9BD</Color>
     <!-- Gray -->
-    <Color x:Key="Toggl.GrayColor">#ABA0AF</Color>
+    <Color x:Key="Toggl.GrayColor">#A5A5A8</Color>
     <!-- Grayish -->
-    <Color x:Key="Toggl.Grayish1Color">#766C7B</Color>
+    <Color x:Key="Toggl.Grayish1Color">#696A6B</Color>
     <!-- Grayish -->
-    <Color x:Key="Toggl.Grayish2Color">#6B5A74</Color>
+    <Color x:Key="Toggl.Grayish2Color">#858585</Color>
     <!-- Light Gray -->
-    <Color x:Key="Toggl.LightGrayColor">#463350</Color>
+    <Color x:Key="Toggl.LightGrayColor">#3B3B3B</Color>
     <!-- Off-white -->
-    <Color x:Key="Toggl.OffWhiteColor">#0B030E</Color>
+    <Color x:Key="Toggl.OffWhiteColor">#0F0F0F</Color>
     <!-- White -->
-    <Color x:Key="Toggl.WhiteColor">#1B0A24</Color>
+    <Color x:Key="Toggl.WhiteColor">#1F1F1F</Color>
     <!-- Off-white -->
-    <Color x:Key="Toggl.SelectionElements.BackgroundColor">#180A1E</Color>
+    <Color x:Key="Toggl.SelectionElements.BackgroundColor">#141414</Color>
 
     <Color x:Key="Toggl.AccentColor">#DF68D0</Color>
     <Color x:Key="Toggl.AccentColorPlusOne">#B655AA</Color>
@@ -40,17 +40,17 @@
     <Color x:Key="Toggl.SecondaryAccentColorThirtyPercentDarker">#B36055</Color>
 
     <!-- Toggl.BlackColor*0.05 on Toggl.WhiteColor background -->
-    <Color x:Key="Toggl.FivePercentBlackColor">#26152E</Color>
-    <Color x:Key="Toggl.TransparentBlackColor">#0026152E</Color>
+    <Color x:Key="Toggl.FivePercentBlackColor">#2D2D2D</Color>
+    <Color x:Key="Toggl.TransparentBlackColor">#002D2D2D</Color>
 
     <!-- A combination of Toggl.LightGrayColor and 25% Toggl.BlackColor: -->
-    <SolidColorBrush x:Key="Toggl.Button.Primary.MouseOverBorder" Color="#735F77" po:Freeze="True" />
+    <SolidColorBrush x:Key="Toggl.Button.Primary.MouseOverBorder" Color="#5F5F5F" po:Freeze="True" />
     <!-- A combination of Toggl.LightGrayColor and 5% Toggl.BlackColor: -->
-    <SolidColorBrush x:Key="Toggl.Button.Primary.MouseOverBackground" Color="#4F3C57" po:Freeze="True" />
+    <SolidColorBrush x:Key="Toggl.Button.Primary.MouseOverBackground" Color="#424242" po:Freeze="True" />
     <!-- A combination of Toggl.LightGrayColor and 10% Toggl.BlackColor: -->
-    <SolidColorBrush x:Key="Toggl.Button.Primary.PressedBackground" Color="#58455F" po:Freeze="True" />
+    <SolidColorBrush x:Key="Toggl.Button.Primary.PressedBackground" Color="#494949" po:Freeze="True" />
     <!-- A combination of Toggl.LightGrayColor and 30% Toggl.BlackColor: -->
-    <SolidColorBrush x:Key="Toggl.Button.Primary.PressedBorder" Color="#7D687F" po:Freeze="True" />
+    <SolidColorBrush x:Key="Toggl.Button.Primary.PressedBorder" Color="#656565" po:Freeze="True" />
 
     <!-- 5% Toggl.BlackColor on Toggl.WhiteColor background -->
     <SolidColorBrush x:Key="Toggl.TextBox.Timer.MouseOverBackground" Color="{StaticResource Toggl.FivePercentBlackColor}" po:Freeze="True" />
