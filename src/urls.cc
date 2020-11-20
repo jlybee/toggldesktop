@@ -9,7 +9,7 @@ namespace urls {
 // Whether requests are sent to staging backend
 
 #ifndef TOGGL_PRODUCTION_BUILD
-static bool use_staging_as_backend = true;
+static bool use_staging_as_backend = false;
 #else
 static bool use_staging_as_backend = false;
 #endif
