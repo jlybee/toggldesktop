@@ -15,4 +15,4 @@ Install Visual Studio 2019 with `.NET desktop development`, `Desktop development
 
 Then open the solution file `src\ui\windows\TogglDesktop\TogglDesktop.sln` and run it in `Debug` mode.
 
-The solution is using OpenSSL binaries. To rebuild OpenSSL from sources refer to [this page](docs/win/build-openSSL.md).
+The executable can then be found in e.g. src\ui\windows\TogglDesktop\TogglDesktop\bin\x64\Debug\
