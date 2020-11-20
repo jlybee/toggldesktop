@@ -32,7 +32,7 @@
 #ifdef TOGGL_ALLOW_UPDATE_CHECK
 # define UPDATE_CHECK_DISABLED false
 #else
-# define UPDATE_CHECK_DISABLED true
+# define UPDATE_CHECK_DISABLED false
 #endif
 
 #if defined(TOGGL_PRODUCTION_BUILD) && !defined(APP_ENVIRONMENT)
