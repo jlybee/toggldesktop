@@ -69,13 +69,7 @@ final class EditorViewController: NSViewController {
     private lazy var tagDatasource = TagDataSource(items: TagStorage.shared.tags,
                                                    updateNotificationName: .TagStorageChangedNotification)
 
-    private lazy var borderColor: NSColor = {
-        if #available(OSX 10.13, *) {
-            return NSColor(named: NSColor.Name("upload-border-color"))!
-        } else {
-            return ConvertHexColor.hexCode(toNSColor: "#ACACAC")
-        }
-    }()
+    private let borderColor = Color.uploadBorder.color
     private lazy var calendarViewControler: CalendarViewController = {
         let controller = CalendarViewController(nibName: NSNib.Name("CalendarViewController"), bundle: nil)
         controller.delegate = self
@@ -89,7 +83,7 @@ final class EditorViewController: NSViewController {
     }()
     private lazy var dayNameAttribute: [NSAttributedString.Key: Any] = {
         return [NSAttributedString.Key.font: NSFont.systemFont(ofSize: 14),
-                NSAttributedString.Key.foregroundColor: NSColor.togglBlackText]
+                NSAttributedString.Key.foregroundColor: Color.blackText.color]
     }()
     fileprivate var isRegisterTimerNotification = false
     private lazy var dateFormatter: DateFormatter = {
@@ -317,7 +311,7 @@ extension EditorViewController {
         tagInputContainerView.borderColor = borderColor
 
         // Add tag token if need
-        if let tagNames = timeEntry.tags as? [String] {
+        if let tagNames = timeEntry.tags {
             let tags = tagNames.map { Tag(name: $0) }
 
             // Update selected tags
@@ -636,7 +630,7 @@ extension EditorViewController: TagTokenViewDelegate {
     func tagTokenShouldDelete(with tag: Tag, sender: TagTokenView) {
         guard !tag.isMoreTag && !tag.isEmptyTag else { return }
         sender.removeFromSuperview()
-        if let tags = timeEntry.tags as? [String] {
+        if let tags = timeEntry.tags {
             let remainingTags = tags.compactMap { (tagName) -> String? in
                 if tagName == tag.name {
                     return nil

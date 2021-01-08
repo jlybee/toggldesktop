@@ -460,6 +460,14 @@ public static partial class Toggl
         }
     }
 
+    public static bool SetTimeEntryStartTimeStampWithOption(string guid, long timeStamp, bool keepEndTimeFixed)
+    {
+        using (Performance.Measure("changing time entry start time stamp"))
+        {
+            return toggl_set_time_entry_start_timestamp_with_option(ctx, guid, timeStamp, keepEndTimeFixed);
+        }
+    }
+
     public static bool SetTimeEntryEndTimeStamp(string guid, long timeStamp)
     {
         using (Performance.Measure("changing time entry end time stamp"))
@@ -934,7 +942,15 @@ public static partial class Toggl
     public static readonly BehaviorSubject<DateTime> TimelineSelectedDate = new BehaviorSubject<DateTime>(DateTime.Today);
 
     public static readonly BehaviorSubject<TogglTimeEntryView?> RunningTimeEntry = new BehaviorSubject<TogglTimeEntryView?>(null);
-    public static IObservable<Unit> StoppedTimerState = RunningTimeEntry.Where(te => te == null).Select(_ => Unit.Default);
+
+    public static readonly IObservable<Unit> StoppedTimerState =
+        RunningTimeEntry
+        .Where(te => te == null)
+        .Select(_ => Unit.Default);
+    public static readonly IObservable<TogglTimeEntryView> RunningTimerState =
+        RunningTimeEntry
+            .Where(te => te != null)
+            .Select(te => te.Value);
     public static event DisplayTimelineUI OnDisplayTimelineUI = delegate { };
     private static void listenToLibEvents()
     {

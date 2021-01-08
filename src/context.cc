@@ -4515,7 +4515,7 @@ void Context::SetSleep() {
     // Set Sleep as usual
     if (!isHandled) {
         logger.debug("SetSleep");
-        idle_.SetSleep();
+        idle_.SetSystemLocked();
         if (window_change_recorder_) {
             window_change_recorder_->SetIsSleeping(true);
         }
@@ -4673,7 +4673,7 @@ void Context::onWake(Poco::Util::TimerTask&) {  // NOLINT
             updateUI(render);
         }
 
-        idle_.SetWake(user_);
+        idle_.SetSystemUnlocked(user_);
         if (window_change_recorder_) {
             window_change_recorder_->SetIsSleeping(false);
         }
@@ -4693,6 +4693,7 @@ void Context::onWake(Poco::Util::TimerTask&) {  // NOLINT
 
 void Context::SetLocked() {
     logger.debug("SetLocked");
+    idle_.SetSystemLocked();
     if (window_change_recorder_) {
         window_change_recorder_->SetIsLocked(true);
     }
@@ -4700,6 +4701,7 @@ void Context::SetLocked() {
 
 void Context::SetUnlocked() {
     logger.debug("SetUnlocked");
+    idle_.SetSystemUnlocked(user_);
     if (window_change_recorder_) {
         window_change_recorder_->SetIsLocked(false);
     }
@@ -5996,6 +5998,7 @@ error Context::pushEntries(
 
             if (kBadRequestError == resp.err) {
                 error_message = resp.body;
+                (*it)->SetValidationError(error_message);
             }
 
             continue;
@@ -6402,7 +6405,6 @@ void Context::syncCollectJSON(Json::Value &array, const std::vector<T*> &source)
         // That causes the whole syncing process to grind to a halt, so let's not sync those entities
         if (!found) {
             logger.error("Was not able to sync entity: ", i->String());
-            i->SetUnsynced();
             i->SetValidationError(kForeignEntityLostError);
         }
 
@@ -6530,7 +6532,6 @@ error Context::syncHandleResponse(Json::Value &array, const std::vector<T*> &sou
                     model->MarkAsDeletedOnServer();
                     continue;
                 }
-                model->SetUnsynced();
                 model->SetValidationError(errorMessage);
                 logger.error("Sync: Error when syncing ", modelInfo, ": ", errorMessage);
                 displayError(errorMessage);

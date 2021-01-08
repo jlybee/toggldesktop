@@ -56,8 +56,6 @@
 		49A1204D24E9629A00167A71 /* ResponderAutoCompleteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1204C24E9629A00167A71 /* ResponderAutoCompleteInput.swift */; };
 		49A1204E24E9629A00167A71 /* ResponderAutoCompleteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1204C24E9629A00167A71 /* ResponderAutoCompleteInput.swift */; };
 		49D3603B24878FA000527DE8 /* TogglDesktopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3603A24878FA000527DE8 /* TogglDesktopTests.swift */; };
-		49DC602D24D05DE100E961A8 /* NSColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC602C24D05DE100E961A8 /* NSColor+Theme.swift */; };
-		49DC602E24D05DE100E961A8 /* NSColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC602C24D05DE100E961A8 /* NSColor+Theme.swift */; };
 		49DC603024D072DB00E961A8 /* NSImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC602F24D072DB00E961A8 /* NSImage+Tint.swift */; };
 		49DC603124D072DB00E961A8 /* NSImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC602F24D072DB00E961A8 /* NSImage+Tint.swift */; };
 		622BBF654A6A958692A4633B /* Pods_TogglDesktop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776525112125F6AD81DF4DEF /* Pods_TogglDesktop.framework */; };
@@ -89,7 +87,6 @@
 		749CB8CD18167D6E00814841 /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749CB8CB18167D6E00814841 /* PreferencesWindowController.xib */; };
 		74A7346A18297DD100525BBC /* ConvertHexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A7346918297DD100525BBC /* ConvertHexColor.m */; };
 		74AA947818090A8E0000539F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74AA947718090A8E0000539F /* Security.framework */; };
-		74BA5FCF18B6E770009DAA2D /* NSHoverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BA5FCE18B6E770009DAA2D /* NSHoverButton.m */; };
 		74BAAA0B17F37B140079386F /* TimeEntryViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BAAA0A17F37B140079386F /* TimeEntryViewItem.m */; };
 		74BAD31E18BD7D83002FD4CF /* ViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BAD31D18BD7D83002FD4CF /* ViewItem.m */; };
 		74C15796183A8CE600550613 /* AutocompleteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C15795183A8CE600550613 /* AutocompleteItem.m */; };
@@ -449,7 +446,6 @@
 		BAE64D752368334000244D2B /* AutocompleteDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C1579A183BA5DA00550613 /* AutocompleteDataSource.m */; };
 		BAE64D762368334000244D2B /* BezierPath+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0E380F2225257D00D0121B /* BezierPath+Corner.swift */; };
 		BAE64D772368334000244D2B /* ProjectContentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D33502248980B00B953A8 /* ProjectContentCellView.swift */; };
-		BAE64D782368334000244D2B /* NSHoverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BA5FCE18B6E770009DAA2D /* NSHoverButton.m */; };
 		BAE64D792368334000244D2B /* SystemMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3E75D322291CEB009AD291 /* SystemMessage.swift */; };
 		BAE64D7A2368334000244D2B /* WorkspaceAutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA11AC22251F4D6007F31D2 /* WorkspaceAutoCompleteTextField.swift */; };
 		BAE64D7B2368334000244D2B /* NSTextFieldClickablePointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8979C919235EA2007061E0 /* NSTextFieldClickablePointer.m */; };
@@ -614,6 +610,12 @@
 		C2060EB9252766FB00959A98 /* TimerDescriptionFieldHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2060EB7252766FB00959A98 /* TimerDescriptionFieldHandlerTests.swift */; };
 		C238D7DF251B7215004EC739 /* TimerDescriptionFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238D7DE251B7215004EC739 /* TimerDescriptionFieldHandler.swift */; };
 		C238D7E0251B7215004EC739 /* TimerDescriptionFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238D7DE251B7215004EC739 /* TimerDescriptionFieldHandler.swift */; };
+		C23A5966255C393E00A56A54 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A5965255C393E00A56A54 /* Colors.swift */; };
+		C23A5967255C393E00A56A54 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A5965255C393E00A56A54 /* Colors.swift */; };
+		C27B27E6256E82A600E88A20 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B27E5256E82A600E88A20 /* KeyButton.swift */; };
+		C27B27E7256E82A600E88A20 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B27E5256E82A600E88A20 /* KeyButton.swift */; };
+		C27B27FB256E854700E88A20 /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B27FA256E854700E88A20 /* HoverButton.swift */; };
+		C27B27FC256E854700E88A20 /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B27FA256E854700E88A20 /* HoverButton.swift */; };
 		C27E044F254AFFB0009871D0 /* TimerDurationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E044E254AFFB0009871D0 /* TimerDurationControl.swift */; };
 		C27E0450254AFFB0009871D0 /* TimerDurationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E044E254AFFB0009871D0 /* TimerDurationControl.swift */; };
 		C27E0454254B0008009871D0 /* TimerDurationControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = C27E0453254B0008009871D0 /* TimerDurationControl.xib */; };
@@ -774,7 +776,6 @@
 		49D3603824878FA000527DE8 /* TogglDesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglDesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D3603A24878FA000527DE8 /* TogglDesktopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglDesktopTests.swift; sourceTree = "<group>"; };
 		49D3603C24878FA000527DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49DC602C24D05DE100E961A8 /* NSColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Theme.swift"; sourceTree = "<group>"; };
 		49DC602F24D072DB00E961A8 /* NSImage+Tint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Tint.swift"; sourceTree = "<group>"; };
 		4BCB2D1F3BD02A806D947C18 /* Pods-TogglDesktop-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TogglDesktop-AppStore.release.xcconfig"; path = "Target Support Files/Pods-TogglDesktop-AppStore/Pods-TogglDesktop-AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		523FD02C959288FBFA20F5B1 /* Pods-TogglDesktop-AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TogglDesktop-AppStore.debug.xcconfig"; path = "Target Support Files/Pods-TogglDesktop-AppStore/Pods-TogglDesktop-AppStore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -791,7 +792,7 @@
 		69FC180217E6534400B96425 /* TogglDesktop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TogglDesktop-Prefix.pch"; sourceTree = "<group>"; };
 		69FC180417E6534400B96425 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		69FC180617E6534400B96425 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		69FC180717E6534400B96425 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		69FC180717E6534400B96425 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 1; };
 		69FC181217E6534500B96425 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74033C8D17EC1CFD00CA53D3 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		74033C9617EC1DE100CA53D3 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -836,8 +837,6 @@
 		74A7346918297DD100525BBC /* ConvertHexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertHexColor.m; sourceTree = "<group>"; };
 		74AA947718090A8E0000539F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		74B680A8180759C300B697AA /* TogglDesktopLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TogglDesktopLibrary.xcodeproj; path = ../../../../lib/osx/TogglDesktopLibrary.xcodeproj; sourceTree = "<group>"; };
-		74BA5FCD18B6E770009DAA2D /* NSHoverButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHoverButton.h; sourceTree = "<group>"; };
-		74BA5FCE18B6E770009DAA2D /* NSHoverButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHoverButton.m; sourceTree = "<group>"; };
 		74BAAA0917F37B140079386F /* TimeEntryViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEntryViewItem.h; sourceTree = "<group>"; };
 		74BAAA0A17F37B140079386F /* TimeEntryViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeEntryViewItem.m; sourceTree = "<group>"; };
 		74BAD31C18BD7D83002FD4CF /* ViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewItem.h; sourceTree = "<group>"; };
@@ -1113,6 +1112,9 @@
 		BAFBFCC721CD1D3C004B443F /* SystemService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemService.m; sourceTree = "<group>"; };
 		C2060EB7252766FB00959A98 /* TimerDescriptionFieldHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDescriptionFieldHandlerTests.swift; sourceTree = "<group>"; };
 		C238D7DE251B7215004EC739 /* TimerDescriptionFieldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDescriptionFieldHandler.swift; sourceTree = "<group>"; };
+		C23A5965255C393E00A56A54 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C27B27E5256E82A600E88A20 /* KeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
+		C27B27FA256E854700E88A20 /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
 		C27E044E254AFFB0009871D0 /* TimerDurationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDurationControl.swift; sourceTree = "<group>"; };
 		C27E0453254B0008009871D0 /* TimerDurationControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerDurationControl.xib; sourceTree = "<group>"; };
 		C27E0469254B2772009871D0 /* DropdownWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownWindow.swift; sourceTree = "<group>"; };
@@ -1253,6 +1255,7 @@
 			children = (
 				BAE007DD21FAF00D00404379 /* Media.xcassets */,
 				BAF50DE421A29FED0090BA95 /* Images.xcassets */,
+				C23A5965255C393E00A56A54 /* Colors.swift */,
 				3C1E013E19D2DAE300DBF9A5 /* dsa_pub.pem */,
 				4917325624C06BA3003EE7CC /* cacert.pem */,
 			);
@@ -1365,6 +1368,7 @@
 				BA08E085222E709C0075F68E /* ProjectTextField.h */,
 				BA08E086222E709C0075F68E /* ProjectTextField.m */,
 				4917563624E13964008CAB88 /* ResponderTextField.swift */,
+				BA4791FB22F0479200E24F79 /* VerticallyCenteredTextFieldCell.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -1382,7 +1386,6 @@
 		49850A9624BF4C5D00D7E22F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				49DC602C24D05DE100E961A8 /* NSColor+Theme.swift */,
 				BA81896923016148000710EA /* NSColor+VisibleColor.swift */,
 				BA4791EB22F0478900E24F79 /* NSColor+Utils.swift */,
 				BA4791EA22F0478900E24F79 /* String+Search.swift */,
@@ -1413,17 +1416,18 @@
 			children = (
 				4943FB6324C072590000DE3C /* TextFields */,
 				BA4791FC22F0479200E24F79 /* NoInteractionView.swift */,
-				BA4791FB22F0479200E24F79 /* VerticallyCenteredTextFieldCell.swift */,
 				BA03725421FE9FD400FC277B /* FlatButton.swift */,
 				499779BC24D01C6A0011C50E /* SelectableButton.swift */,
+				C27B27E5256E82A600E88A20 /* KeyButton.swift */,
+				BA0F67B6224A32F700ED0F91 /* CursorButton.swift */,
+				BA053658225DDDBB00C26E1F /* CustomFocusRingButton.swift */,
+				C27B27FA256E854700E88A20 /* HoverButton.swift */,
 				749BD0BB1833E28400980494 /* NSBoxClickable.h */,
 				749BD0BC1833E28400980494 /* NSBoxClickable.m */,
 				95C0707818CDB91500A34D0D /* NSCustomComboBox.h */,
 				95C0707918CDB91500A34D0D /* NSCustomComboBox.m */,
 				95C0707518CDB67300A34D0D /* NSCustomComboBoxCell.h */,
 				95C0707618CDB67300A34D0D /* NSCustomComboBoxCell.m */,
-				74BA5FCD18B6E770009DAA2D /* NSHoverButton.h */,
-				74BA5FCE18B6E770009DAA2D /* NSHoverButton.m */,
 				BA01E89F232F77B3006B93EC /* ClickableImageView.h */,
 				BA01E8A0232F77B3006B93EC /* ClickableImageView.m */,
 				BA4AEB9B22C217A4001A898D /* ResizablePopover.swift */,
@@ -2179,8 +2183,6 @@
 			children = (
 				BA65A24E22B7A64400F895FD /* DateSelectionView */,
 				BA014026225707F1000E5B91 /* TagTokenView */,
-				BA0F67B6224A32F700ED0F91 /* CursorButton.swift */,
-				BA053658225DDDBB00C26E1F /* CustomFocusRingButton.swift */,
 				BAD307D2229C1BD000C727DB /* KeyboardDatePicker.swift */,
 				BAE6379922B225C70024DD08 /* AddTagButton.swift */,
 			);
@@ -2800,7 +2802,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -2810,7 +2811,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2830,7 +2830,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework",
-				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -2840,7 +2839,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2948,6 +2946,7 @@
 				C2A84B022524D0ED00DAA468 /* AutocompleteSourceViewType.swift in Sources */,
 				BA13D2112269BE2F00EB3833 /* DateInfo.swift in Sources */,
 				BA5AC61623264651007E6C91 /* TimelineCollectionView.swift in Sources */,
+				C27B27FB256E854700E88A20 /* HoverButton.swift in Sources */,
 				BA13D20E2269BAA600EB3833 /* DateCellViewItem.swift in Sources */,
 				BA47920122F0479200E24F79 /* TimerContainerBox.swift in Sources */,
 				C27E046A254B2772009871D0 /* DropdownWindow.swift in Sources */,
@@ -2976,7 +2975,6 @@
 				74C1579B183BA5DA00550613 /* AutocompleteDataSource.m in Sources */,
 				BA0E38102225257D00D0121B /* BezierPath+Corner.swift in Sources */,
 				BA7D33512248980B00B953A8 /* ProjectContentCellView.swift in Sources */,
-				74BA5FCF18B6E770009DAA2D /* NSHoverButton.m in Sources */,
 				BAE280C62490C79900D400DA /* SSOService.swift in Sources */,
 				BAB5FFD423F13F75003781D3 /* TimelineDraggingSession.swift in Sources */,
 				BA133AC023740EA6003A6A3A /* LoginSignupTouchBar.swift in Sources */,
@@ -2998,7 +2996,6 @@
 				746947FA1AF3FE3E0024BED7 /* AutotrackerRuleItem.m in Sources */,
 				3C6B2487203E01D90063FC08 /* AutoCompleteInput.m in Sources */,
 				BA13E05C21C7BA6000835EC1 /* UserNotificationCenter.m in Sources */,
-				49DC602D24D05DE100E961A8 /* NSColor+Theme.swift in Sources */,
 				74098C331919899600CBDFB9 /* Utils.m in Sources */,
 				BA0F67B7224A32F700ED0F91 /* CursorButton.swift in Sources */,
 				BA9C2E0C224C8F58002AD2A1 /* KeyboardTableView.swift in Sources */,
@@ -3065,6 +3062,7 @@
 				BA65A22422B7823200F895FD /* MainDashboardViewController.swift in Sources */,
 				BAD307D3229C1BD000C727DB /* KeyboardDatePicker.swift in Sources */,
 				BA7D335722489BD000B953A8 /* AutoCompleteViewDataSource.swift in Sources */,
+				C23A5966255C393E00A56A54 /* Colors.swift in Sources */,
 				BA01404C22570967000E5B91 /* TagStorage.swift in Sources */,
 				74BAD31E18BD7D83002FD4CF /* ViewItem.m in Sources */,
 				BAA0104F22CB66D0007C1541 /* TimelineEmptyTimeEntryCell.swift in Sources */,
@@ -3115,6 +3113,7 @@
 				490CCCE724D30382007D392B /* ProjectTitleFactory.swift in Sources */,
 				95C0707718CDB67300A34D0D /* NSCustomComboBoxCell.m in Sources */,
 				BA2807E02306A2FA001A9E48 /* NSWindowController+Focusable.swift in Sources */,
+				C27B27E6256E82A600E88A20 /* KeyButton.swift in Sources */,
 				BAAF569E2223D4C7003D0D73 /* DotImageView.swift in Sources */,
 				BA014050225710FD000E5B91 /* TagAutoCompleteTextField.swift in Sources */,
 				BA5E988923BF496E0089A2C7 /* HoverImageView.swift in Sources */,
@@ -3182,6 +3181,7 @@
 				C2A84B032524D0ED00DAA468 /* AutocompleteSourceViewType.swift in Sources */,
 				49666CDF24C30D1B0074C1C1 /* Color+Adaptive.swift in Sources */,
 				BA37ACDD23D8900C0013EE26 /* TimelineTimeEntryHoverViewController.swift in Sources */,
+				C27B27FC256E854700E88A20 /* HoverButton.swift in Sources */,
 				BAE64D6B2368334000244D2B /* AutoCompleteTable.m in Sources */,
 				BAE64D6C2368334000244D2B /* ClientDataSource.swift in Sources */,
 				C27E046B254B2772009871D0 /* DropdownWindow.swift in Sources */,
@@ -3202,7 +3202,6 @@
 				BA43B24F23F438AA0007DD99 /* TimelineLineView.swift in Sources */,
 				BA47DEB923969EAC005216AD /* InAppMessage.swift in Sources */,
 				BAE64D772368334000244D2B /* ProjectContentCellView.swift in Sources */,
-				BAE64D782368334000244D2B /* NSHoverButton.m in Sources */,
 				C27E0450254AFFB0009871D0 /* TimerDurationControl.swift in Sources */,
 				BAE64D792368334000244D2B /* SystemMessage.swift in Sources */,
 				BAE64D7A2368334000244D2B /* WorkspaceAutoCompleteTextField.swift in Sources */,
@@ -3232,7 +3231,6 @@
 				BAE64D8A2368334000244D2B /* CursorButton.swift in Sources */,
 				BA37ACFC23D890250013EE26 /* String+Search.swift in Sources */,
 				BAE64D8B2368334000244D2B /* KeyboardTableView.swift in Sources */,
-				49DC602E24D05DE100E961A8 /* NSColor+Theme.swift in Sources */,
 				BAE64D8D2368334000244D2B /* main.m in Sources */,
 				BA37ACE823D890100013EE26 /* TimeChunk.swift in Sources */,
 				BAE64D8E2368334000244D2B /* FeedbackWindowController.m in Sources */,
@@ -3299,6 +3297,7 @@
 				BAE64DB82368334000244D2B /* TagStorage.swift in Sources */,
 				BAE64DB92368334000244D2B /* ViewItem.m in Sources */,
 				BAE64DBA2368334000244D2B /* CalendarCollectionView.swift in Sources */,
+				C23A5967255C393E00A56A54 /* Colors.swift in Sources */,
 				BAE64DBD2368334000244D2B /* ProjectDataSource.swift in Sources */,
 				BAE64DBE2368334000244D2B /* AutoCompleteRowView.swift in Sources */,
 				BA4A7D5523755A4200A42095 /* TouchBarService+Name.swift in Sources */,
@@ -3349,6 +3348,7 @@
 				490CCCE824D30382007D392B /* ProjectTitleFactory.swift in Sources */,
 				BAD4F9C4246D392C0032F0C7 /* PasswordStrengthValidation.swift in Sources */,
 				BAE64DE32368334000244D2B /* idler.c in Sources */,
+				C27B27E7256E82A600E88A20 /* KeyButton.swift in Sources */,
 				BAE64DE42368334000244D2B /* ProjectCreationView.swift in Sources */,
 				BAE64DE52368334000244D2B /* ClientStorage.swift in Sources */,
 				BAD4F9C5246D392C0032F0C7 /* PasswordStrengthView.swift in Sources */,
