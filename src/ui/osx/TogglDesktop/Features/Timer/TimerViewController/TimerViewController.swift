@@ -59,7 +59,11 @@ class TimerViewController: NSViewController {
         }
     }
 
-    @IBOutlet weak var startButton: NSHoverButton!
+    @IBOutlet weak var startButton: HoverButton! {
+        didSet {
+            startButton.activateOnEnterKey = true
+        }
+    }
     @IBOutlet weak var descriptionContainerBox: TimerContainerBox!
     @IBOutlet weak var trailingStackView: NSStackView!
     @IBOutlet weak var projectButton: SelectableButton!
@@ -401,7 +405,7 @@ class TimerViewController: NSViewController {
             .compactMap { $0 }
             .forEach {
                 $0.cornerRadius = $0.bounds.height / 2
-                $0.selectedBackgroundColor = NSColor.togglGreen
+                $0.selectedBackgroundColor = Color.green.color
         }
         billableButton.isActiveOnClick = false
 

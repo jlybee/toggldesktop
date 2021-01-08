@@ -111,12 +111,15 @@
 @property (nonatomic, assign) BOOL manualMode;
 @property (nonatomic, assign) BOOL onTop;
 
+@property (nonatomic) BOOL isAppIconInRunningState;
+
 @end
 
 @implementation AppDelegate
 
 void *ctx;
 
+static NSString *statusItemDefaultTooltip = @"Total today: 0h 0min";
 
 - (void)applicationWillFinishLaunching:(NSNotification *)not
 {
@@ -126,6 +129,7 @@ void *ctx;
 	self.showMenuBarTimer = NO;
 	self.manualMode = NO;
 	self.onTop = NO;
+    self.isAppIconInRunningState = YES;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -816,8 +820,10 @@ void *ctx;
 			free(str);
 		}
 
-		// Update tooltip
-		[self.statusItem setToolTip:[NSString stringWithFormat:@"Total today: %@", self.lastKnownRunningTimeEntry.dateDuration]];
+		// Update tooltip if was not set before
+		if ([self.statusItem.toolTip isEqualToString:statusItemDefaultTooltip]) {
+			[self.statusItem setToolTip:[NSString stringWithFormat:@"Total today: %@", self.lastKnownRunningTimeEntry.dateDuration]];
+		}
 	}
 
 	NSString *key = nil;
@@ -888,7 +894,11 @@ void *ctx;
 	{
 		if (!self.willTerminate)
 		{
-			[NSApp setApplicationIconImage:[AppIconFactory appIconWithType:AppIconTypeActive]];
+            if (!self.isAppIconInRunningState)
+            {
+                [NSApp setApplicationIconImage:[AppIconFactory appIconWithType:AppIconTypeActive]];
+                self.isAppIconInRunningState = YES;
+            }
 		}
 
 		[self updateStatusItem];
@@ -918,7 +928,11 @@ void *ctx;
 	{
 		// Change app dock icon to default
 		// See https://developer.apple.com/library/mac/documentation/Carbon/Conceptual/customizing_docktile/dockconcepts.pdf
-		[NSApp setApplicationIconImage:[AppIconFactory appIconWithType:AppIconTypeDefault]];
+        if (self.isAppIconInRunningState)
+        {
+            [NSApp setApplicationIconImage:[AppIconFactory appIconWithType:AppIconTypeDefault]];
+            self.isAppIconInRunningState = NO;
+        }
 	}
 
 	[self updateStatusItem];
@@ -1543,7 +1557,7 @@ void on_time_entry_list(const bool_t open,
 						TogglTimeEntryView *first,
 						const bool_t show_load_more)
 {
-	NSString *todayTotal = @"Total today: 0h 0min";
+	NSString *todayTotal = statusItemDefaultTooltip;
 	NSMutableArray *viewitems = [[NSMutableArray alloc] init];
 	TogglTimeEntryView *it = first;
 
@@ -1572,8 +1586,8 @@ void on_timeline(const bool_t open,
 				 const char_t *date,
 				 TogglTimelineChunkView *first,
 				 TogglTimeEntryView *first_entry,
-				 long start_day,
-				 long end_day)
+				 const uint64_t start_day,
+				 const uint64_t end_day)
 {
 	TimelineDisplayCommand *cmd =
 		[[TimelineDisplayCommand alloc] initWithOpen:open
